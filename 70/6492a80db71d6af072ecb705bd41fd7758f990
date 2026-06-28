@@ -1,0 +1,36 @@
+USAGE.md
+  4bde34d30b6e2075 1-221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "706492a80db71d6af072ecb705bd41fd7758f990",
+  "prompts": {
+    "4bde34d30b6e2075": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0f7b16340ffezfqINCBydVEbXv",
+        "model": "unknown"
+      },
+      "human_author": "jasper.luo",
+      "messages": [],
+      "total_additions": 244,
+      "total_deletions": 23,
+      "accepted_lines": 221,
+      "overriden_lines": 0
+    },
+    "e21300676432b9c7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e9f2bea4-8fda-48da-a31d-45e87f4d7fff",
+        "model": "deepseek-v4-pro"
+      },
+      "human_author": "jasper.luo",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 3,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
