@@ -5,7 +5,7 @@ Thanks for your interest in improving gitb! This is a short guide.
 ## Development setup
 
 ```bash
-git clone https://github.com/USER/gitb.git
+git clone https://github.com/luolin1024/gitb.git
 cd gitb
 cargo build
 cargo test

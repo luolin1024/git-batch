@@ -1,8 +1,48 @@
-# gitb - Blazing-fast multi-repo git batch tool
+# gitb — Blazing-fast multi-repo git batch tool
 
-gitb is a cross-platform CLI tool for running git commands across multiple repositories simultaneously. Built in Rust for maximum performance, it handles hundreds of repos with minimal overhead.
+[![CI](https://github.com/luolin1024/gitb/actions/workflows/ci.yml/badge.svg)](https://github.com/luolin1024/gitb/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/gitb.svg)](https://crates.io/crates/gitb)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![rust: 1.74+](https://img.shields.io/badge/rust-1.74%2B-orange.svg)](https://www.rust-lang.org)
 
-gitb 是一个跨平台命令行工具，用于在多个 Git 仓库上批量执行命令。基于 Rust 构建，性能卓越，可轻松管理数百个仓库。
+> Run git across 100+ repos in parallel. Rust-powered, 3-4× faster than `gita` / `mr`.
+> 用 Rust 写的多仓库 Git 批量工具，比 gita / mr 快 3-4 倍。
+
+![demo](docs/assets/gitb-demo.gif)
+
+## Why gitb?
+
+- **Fast** — parallel execution via rayon. 100 repos `status` in ~2s. [See benchmark →](#performance)
+- **Zero-config** — works out of the box. `cd` into a folder of repos, run `gitb status`.
+- **Cross-platform** — macOS, Linux, Windows. Shell completion for bash / zsh / fish / powershell.
+
+## Install
+
+```bash
+cargo install gitb
+# or, on macOS:
+brew install luolin1024/gitb/gitb
+```
+
+<details>
+<summary>Build from source</summary>
+
+```bash
+git clone https://github.com/luolin1024/gitb.git
+cd gitb
+cargo build --release
+# Binary at ./target/release/gitb
+```
+</details>
+
+## Quick start (30 seconds)
+
+```bash
+cd ~/Work          # a folder containing many git repos
+gitb status        # see all repos at a glance
+gitb pull -j 8     # pull all in parallel
+gitb doctor        # health check: who's behind / dirty / unpushed
+```
 
 ## Features
 
@@ -181,6 +221,19 @@ gitb is written in Rust and uses parallel execution via rayon. It is significant
 | myrepos (mr)  | Perl     | ~3.8s           | ~7.2s              |
 
 *Benchmarks measured on an 8-core machine with SSD. Your results may vary.*
+
+## Comparison with alternatives
+
+| Tool | Language | Parallel | Zero-config | Cross-platform | Shell completion | Smart rebase |
+|------|----------|----------|-------------|----------------|-----------------|--------------|
+| **gitb** | Rust | ✅ rayon | ✅ | ✅ macOS/Linux/Windows | ✅ bash/zsh/fish/pwsh | ✅ stash→rebase→unstash |
+| [gita](https://github.com/nosarthur/gita) | Python | ✅ | ✅ | ✅ | partial | ❌ |
+| [myrepos (mr)](https://myrepos.branchable.com/) | Perl | ✅ | ❌ config file | ✅ | ❌ | ❌ |
+| [mu-repo](https://github.com/fabioz/mu-repo) | Python | ✅ | ✅ | ✅ | ❌ | ❌ |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome — `cargo fmt` and `cargo clippy` must pass.
 
 ## License
 

@@ -8,6 +8,9 @@ license = "MIT"
 description = "Blazing-fast cross-platform multi-repository git batch tool"
 keywords = ["git", "batch", "multi-repo", "monorepo", "cli"]
 categories = ["command-line-utilities", "development-tools"]
+repository = "https://github.com/luolin1024/gitb"
+homepage = "https://github.com/luolin1024/gitb"
+documentation = "https://github.com/luolin1024/gitb#readme"
 
 [[bin]]
 name = "gitb"
