@@ -1,0 +1,23 @@
+CODE_OF_CONDUCT.md
+  fb315fb052362ed0 63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "feb24a3389a285710df47fb389e4d394251484e5",
+  "prompts": {
+    "fb315fb052362ed0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-d697d63c-5d1e-45f1-a2e3-139c9b225776",
+        "model": "unknown"
+      },
+      "human_author": "luolin",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
