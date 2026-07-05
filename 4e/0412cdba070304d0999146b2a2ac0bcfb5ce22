@@ -1,0 +1,23 @@
+.github/workflows/release.yml
+  3fc968c4c36f417a 96-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "4e0412cdba070304d0999146b2a2ac0bcfb5ce22",
+  "prompts": {
+    "3fc968c4c36f417a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-41b96499-765b-491f-8d6b-22f58e2cd593",
+        "model": "unknown"
+      },
+      "human_author": "luolin1024",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 1,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
