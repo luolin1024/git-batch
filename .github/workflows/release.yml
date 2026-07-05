@@ -93,7 +93,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-          merge-matches: true
+
+      - name: Flatten artifacts directory
+        shell: bash
+        run: find artifacts/ -mindepth 2 -type f -exec mv {} artifacts/ \;
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
