@@ -1,0 +1,20 @@
+# Rust build
+/target/
+
+# IDE
+/.idea/
+/.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# OpenCode / Superpowers working directory
+/.omo/
+/docs/superpowers/
+
+# Release/debug binaries (in case built outside target/)
+*.exe
+*.pdb

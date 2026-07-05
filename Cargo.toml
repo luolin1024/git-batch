@@ -1,0 +1,33 @@
+[package]
+name = "gitb"
+version = "0.3.0"
+edition = "2021"
+rust-version = "1.74"
+authors = ["gitb contributors"]
+license = "MIT"
+description = "Blazing-fast cross-platform multi-repository git batch tool"
+keywords = ["git", "batch", "multi-repo", "monorepo", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "gitb"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "env"] }
+clap_complete = "4"
+rayon = "1"
+indicatif = "0.17"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+colored = "2"
+anyhow = "1"
+dialoguer = { version = "0.11", default-features = false, features = ["editor"] }
+glob = "0.3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
