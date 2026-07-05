@@ -93,7 +93,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-          merge-matches: false
+          merge-matches: true
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
