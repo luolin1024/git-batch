@@ -94,13 +94,13 @@ jobs:
         with:
           path: artifacts
 
-      - name: Flatten artifacts directory
+      - name: List artifacts
         shell: bash
-        run: find artifacts/ -mindepth 2 -type f -exec mv {} artifacts/ \;
+        run: find artifacts/ -type f
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
-            artifacts/*
+            artifacts/**/*
