@@ -1,0 +1,60 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "99aa7902ec719e404b3c65e6a0f706c678300962",
+  "prompts": {
+    "4bccd87eb33044fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-fd50993b-0979-4510-bbcc-66ae823a5943",
+        "model": "unknown"
+      },
+      "human_author": "luolin",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 9,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "72e747db649e83ac": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-7e0b64cb-0da4-44e2-a37c-0bf8f3315afd",
+        "model": "unknown"
+      },
+      "human_author": "luolin",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 11,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "9dee3d1341d2900a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-c4a6069f-480d-4054-96a8-eaca2eada2cc",
+        "model": "unknown"
+      },
+      "human_author": "luolin",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 1,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "a4fbd429fbfdf24b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_0ce138dc4ffev2SXepoxsWwhTj-f770d261-5d17-4da9-ae4f-0f7f580fcef7",
+        "model": "unknown"
+      },
+      "human_author": "luolin",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 1,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
