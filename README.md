@@ -1,6 +1,6 @@
 # gitb — Blazing-fast multi-repo git batch tool
 
-[![CI](https://github.com/luolin1024/gitb/actions/workflows/ci.yml/badge.svg)](https://github.com/luolin1024/gitb/actions/workflows/ci.yml)
+[![CI](https://github.com/luolin1024/git-batch/actions/workflows/ci.yml/badge.svg)](https://github.com/luolin1024/git-batch/actions/workflows/ci.yml)
 [![crates.io](https://img.shields.io/crates/v/gitb.svg)](https://crates.io/crates/gitb)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![rust: 1.74+](https://img.shields.io/badge/rust-1.74%2B-orange.svg)](https://www.rust-lang.org)
@@ -21,14 +21,14 @@
 ```bash
 cargo install gitb
 # or, on macOS:
-brew install luolin1024/gitb/gitb
+brew install luolin1024/git-batch/gitb
 ```
 
 <details>
 <summary>Build from source</summary>
 
 ```bash
-git clone https://github.com/luolin1024/gitb.git
+git clone https://github.com/luolin1024/git-batch.git
 cd gitb
 cargo build --release
 # Binary at ./target/release/gitb
