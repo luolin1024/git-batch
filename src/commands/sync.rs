@@ -67,10 +67,7 @@ pub fn run_pull(repos: &[Repo], opts: &GlobalOpts) -> anyhow::Result<()> {
 
         crate::core::GitResult::ok(
             &repo.name,
-            &format!(
-                "Pulled{}",
-                if stashed { " (stash restored)" } else { "" }
-            ),
+            &format!("Pulled{}", if stashed { " (stash restored)" } else { "" }),
         )
     });
 
