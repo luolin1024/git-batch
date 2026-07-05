@@ -135,26 +135,6 @@ impl StatusRow {
             _ => BranchState::Diverged,
         }
     }
-
-    pub fn status_symbols(&self) -> String {
-        let mut symbols = String::new();
-        symbols.push(if self.staged { '+' } else { ' ' });
-        symbols.push(if self.dirty { '*' } else { ' ' });
-        symbols.push(if self.untracked { '?' } else { ' ' });
-        symbols.push(if self.stashed { '$' } else { ' ' });
-        symbols
-    }
-}
-
-/// Branch state to colored string
-fn branch_color(state: BranchState, text: &str) -> ColoredString {
-    match state {
-        BranchState::NoRemote => text.white(),
-        BranchState::Synced => text.green(),
-        BranchState::Ahead => text.purple(),
-        BranchState::Behind => text.yellow(),
-        BranchState::Diverged => text.red(),
-    }
 }
 
 /// Print the multi-repo status overview (gita-ll style)
@@ -196,7 +176,6 @@ pub fn print_status_table(rows: &[StatusRow]) {
 
     for row in rows {
         let state = row.branch_state();
-        let branch_colored = branch_color(state, &row.branch);
 
         // Sync status (upstream relationship)
         let sync_text = match state {
