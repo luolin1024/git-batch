@@ -20,10 +20,8 @@ fn run_push(repos: &[Repo], opts: &GlobalOpts) -> anyhow::Result<()> {
 
     let results = executor::execute_parallel(repos, opts, "Stash", |repo| {
         // Check if there's anything to stash
-        if !opts.dry_run {
-            if !git::is_dirty(&repo.path) && !git::has_untracked(&repo.path) {
-                return crate::core::GitResult::ok(&repo.name, "Nothing to stash (clean)");
-            }
+        if !opts.dry_run && !git::is_dirty(&repo.path) && !git::has_untracked(&repo.path) {
+            return crate::core::GitResult::ok(&repo.name, "Nothing to stash (clean)");
         }
 
         exec_git_on_repo(

@@ -8,7 +8,7 @@ use std::path::{Path, PathBuf};
 ///
 /// - `root`: starting directory
 /// - `depth`: max recursion depth (0 = only check root's immediate children,
-///            1 = also check grandchildren, etc.)
+///   1 = also check grandchildren, etc.)
 /// - `skip`: directory names to skip
 ///
 /// Returns a sorted list of Repo objects.

@@ -146,7 +146,7 @@ pub fn get_ahead_behind(repo_path: &Path) -> (usize, usize) {
     match output {
         Ok(out) if out.status.success() => {
             let s = String::from_utf8_lossy(&out.stdout);
-            let parts: Vec<&str> = s.trim().split_whitespace().collect();
+            let parts: Vec<&str> = s.split_whitespace().collect();
             if parts.len() == 2 {
                 let behind = parts[0].parse().unwrap_or(0);
                 let ahead = parts[1].parse().unwrap_or(0);

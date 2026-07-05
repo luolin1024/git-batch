@@ -9,7 +9,6 @@ pub fn run(repos: &[Repo], opts: &GlobalOpts, message: &str, all: bool) -> anyho
     executor::print_skip_info(opts, &opts.skip);
 
     let message = message.to_string();
-    let all = all;
 
     let results = executor::execute_parallel(repos, opts, "Commit", |repo| {
         // Optionally stage all changes

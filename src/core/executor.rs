@@ -68,7 +68,7 @@ where
                 // Update progress
                 let done = completed.fetch_add(1, Ordering::Relaxed) + 1;
                 if let Some(ref pb) = progress_bar {
-                    pb.set_message(format!("{}", repo.name));
+                    pb.set_message(repo.name.clone());
                     pb.inc(1);
                     if done == total {
                         pb.finish_with_message("done");

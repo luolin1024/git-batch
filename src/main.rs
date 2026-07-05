@@ -83,8 +83,8 @@ fn main() -> anyhow::Result<()> {
 }
 
 fn build_global_opts(cli: &Cli, config: &WorkspaceConfig) -> GlobalOpts {
-    let depth = if config.workspace.default_depth.is_some() && cli.depth == 1 {
-        config.workspace.default_depth.unwrap()
+    let depth = if cli.depth == 1 {
+        config.workspace.default_depth.unwrap_or(cli.depth)
     } else {
         cli.depth
     };

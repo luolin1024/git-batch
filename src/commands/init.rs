@@ -7,18 +7,16 @@ use dialoguer::{Confirm, Input, MultiSelect};
 
 pub fn run(opts: &GlobalOpts) -> anyhow::Result<()> {
     println!("\n{}", "gitb workspace initialization".bold());
-    println!("{}", "===========================\n");
+    println!("===========================\n");
 
     // Check if gitb.toml already exists
-    if WorkspaceConfig::exists_in_cwd() {
-        if !Confirm::new()
-            .with_prompt("gitb.toml already exists. Overwrite?")
-            .default(false)
-            .interact()?
-        {
-            println!("Aborted.");
-            return Ok(());
-        }
+    if WorkspaceConfig::exists_in_cwd() && !Confirm::new()
+        .with_prompt("gitb.toml already exists. Overwrite?")
+        .default(false)
+        .interact()?
+    {
+        println!("Aborted.");
+        return Ok(());
     }
 
     // Discover repos in current directory

@@ -7,7 +7,7 @@ pub fn run(repos: &[Repo], opts: &GlobalOpts) -> anyhow::Result<()> {
     executor::print_header(opts, "Diff across repos");
 
     if opts.dry_run {
-        println!("{} [DRY-RUN] Would show diff across {} repos", "", repos.len());
+        println!(" [DRY-RUN] Would show diff across {} repos", repos.len());
         return Ok(());
     }
 

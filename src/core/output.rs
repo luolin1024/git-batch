@@ -159,13 +159,12 @@ pub fn print_status_table(rows: &[StatusRow]) {
         .map(|r| r.branch.chars().count())
         .max()
         .unwrap_or(6)
-        .min(30) // cap branch column width
-        .max(6);
+        .clamp(6, 30);
 
     // Header
     println!(
-        "  {:<nw$}  {:<bw$}  {:<8}  {:<8}  {}",
-        "REPO", "BRANCH", "SYNC", "CHANGES", "LAST COMMIT",
+        "  {:<nw$}  {:<bw$}  {:<8}  {:<8}  LAST COMMIT",
+        "REPO", "BRANCH", "SYNC", "CHANGES",
         nw = name_width,
         bw = branch_width,
     );
@@ -274,7 +273,7 @@ pub fn print_doctor_report(rows: &[DoctorRow]) {
     }
 
     println!("\n{}", "Health Check Report".bold());
-    println!("{}", "==================");
+    println!("==================");
 
     let mut total_issues = 0;
 

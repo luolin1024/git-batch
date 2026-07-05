@@ -18,7 +18,7 @@ fn run_list(repos: &[Repo], opts: &GlobalOpts) -> anyhow::Result<()> {
     executor::print_header(opts, "Branch listing");
 
     if opts.dry_run {
-        println!("{} [DRY-RUN] Would list branches across {} repos", "", repos.len());
+        println!(" [DRY-RUN] Would list branches across {} repos", repos.len());
         return Ok(());
     }
 
@@ -71,7 +71,7 @@ fn run_list(repos: &[Repo], opts: &GlobalOpts) -> anyhow::Result<()> {
             if branch_name == current {
                 println!("    {} {}", "*".green(), branch_name.green().bold());
             } else {
-                println!("    {} {}", " ", branch_name);
+                println!("     {}", branch_name);
             }
         }
     }

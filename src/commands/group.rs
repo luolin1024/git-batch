@@ -36,7 +36,7 @@ fn run_list(config: &WorkspaceConfig) -> anyhow::Result<()> {
     }
 
     println!("\n{}", "Groups".bold());
-    println!("{}", "------");
+    println!("------");
     for (name, group) in &config.groups {
         println!("\n  {} ({} repos)", name.cyan(), group.repos.len());
         for repo in &group.repos {
