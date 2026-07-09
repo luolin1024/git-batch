@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/luolin1024/git-batch/releases/download/v0.3.1/gitb.exe",
-      "hash": "08596a85c34e4745d49510e55c2f5be9b0295e2bbcf74693f79479e93f1209f5"
+      "hash": "afcf0101b36d45860bef67b89b23cf923ae1c2e1dda8506f40a1e9dcd76e1102"
     }
   },
   "bin": "gitb.exe",
